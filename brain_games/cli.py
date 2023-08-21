@@ -1,16 +1,11 @@
 import prompt
 
 
-def welcome_user() -> str:
+def welcome_user(additional_text: str = '') -> str:
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    return name
-
-
-def welcome_even_game() -> str:
-    name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print(additional_text)
     return name
 
 
