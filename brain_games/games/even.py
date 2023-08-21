@@ -6,7 +6,8 @@ from brain_games.utils.randoms import get_rand_number_from_range
 
 def play():
     name = welcome_user(
-        additional_text='Answer "yes" if the number is even, otherwise answer "no".'
+        additional_text='Answer "yes" if the number is even, '
+                        'otherwise answer "no".'
     )
 
     answer_map = {

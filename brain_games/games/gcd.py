@@ -1,23 +1,23 @@
+from math import gcd
+
 import prompt
 
 from brain_games.cli import welcome_user, failure, congratulations
-from brain_games.utils.randoms import (get_rand_number_from_range,
-                                       get_rand_elem_from_seq)
+from brain_games.utils.randoms import get_rand_number_from_range
 
 
 def play():
     name = welcome_user(
-        additional_text='What is the result of the expression?'
+        additional_text='Find the greatest common divisor of given numbers. '
     )
     for _ in range(3):
 
         a = get_rand_number_from_range(x=0, y=100)
         b = get_rand_number_from_range(x=0, y=100)
-        operator = get_rand_elem_from_seq(['+', '-', '*'])
 
-        result = prompt.integer(f'Question: {a} {operator} {b} = ?')
+        result = prompt.integer(f'Question: {a} {b}')
 
-        real_result = eval(f'{a}{operator}{b}')
+        real_result = gcd(a, b)
 
         if result != real_result:
             failure(
