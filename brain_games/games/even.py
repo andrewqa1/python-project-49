@@ -5,6 +5,9 @@ from brain_games.utils.randoms import get_rand_number_from_range
 
 
 def play():
+    """
+    Function to play even game
+    """
     name = welcome_user(
         additional_text='Answer "yes" if the number is even, '
                         'otherwise answer "no".'

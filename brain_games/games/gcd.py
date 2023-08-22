@@ -7,6 +7,9 @@ from brain_games.utils.randoms import get_rand_number_from_range
 
 
 def play():
+    """
+    Function to play gcd game
+    """
     name = welcome_user(
         additional_text='Find the greatest common divisor of given numbers. '
     )
