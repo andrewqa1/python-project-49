@@ -39,5 +39,3 @@ def play():
     congratulations(
         name=name
     )
-
-play()
