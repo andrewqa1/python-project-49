@@ -14,13 +14,14 @@ def play():
         step = get_rand_number_from_range(1, 10)
         stop = start + step * get_rand_number_from_range(5, 11)
 
-        progression = list(range(start, stop, step))
+        progression = [str(number) for number in range(start, stop, step)]
 
         missed_ind = get_rand_number_from_range(0, len(progression) - 1)
 
         progression[missed_ind], real_number = '...', progression[missed_ind]
 
-        result = prompt.integer(f'Question: {" ".join(str(number) for number in progression)}\nYour answer: ')
+        result = prompt.integer(f'Question: {" ".join(progression)}'
+                                f'\nYour answer: ')
 
         if result != real_number:
             failure(
