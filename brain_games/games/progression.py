@@ -26,7 +26,7 @@ def play():
         result = prompt.integer(f'Question: {" ".join(progression)}'
                                 f'\nYour answer: ')
 
-        if result != real_number:
+        if result != int(real_number):
             failure(
                 name=name,
                 additional_text=f'"{result}" is wrong answer ;(. '
@@ -39,3 +39,5 @@ def play():
     congratulations(
         name=name
     )
+
+play()
