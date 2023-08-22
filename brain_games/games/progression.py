@@ -19,9 +19,9 @@ def play():
 
         progression = [str(number) for number in range(start, stop, step)]
 
-        missed_ind = get_rand_number_from_range(0, len(progression) - 1)
+        missed_ind = get_rand_number_from_range(1, len(progression) - 1)
 
-        progression[missed_ind], real_number = '...', progression[missed_ind]
+        progression[missed_ind], real_number = '..', progression[missed_ind]
 
         result = prompt.integer(f'Question: {" ".join(progression)}'
                                 f'\nYour answer: ')
