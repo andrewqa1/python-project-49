@@ -10,6 +10,7 @@ def process_game(
         start_game_text: str,
 ):
     """
+    Function to process game
     :param start_game_text: Text to show before game starts
     :param question_generator: Callable object to generate question and answer
     """
