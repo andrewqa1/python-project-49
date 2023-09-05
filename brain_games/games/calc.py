@@ -1,6 +1,7 @@
 from typing import Tuple
 
-from brain_games.base.randoms import get_rand_number_from_range, get_rand_elem_from_seq
+from brain_games.base.randoms import (get_rand_number_from_range,
+                                      get_rand_elem_from_seq)
 
 
 def generate_calc_question() -> Tuple[str, str]:
