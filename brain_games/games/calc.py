@@ -11,7 +11,7 @@ def generate_calc_question() -> Tuple[str, str]:
     b = get_rand_number_from_range(x=0, y=100)
     operator = get_rand_elem_from_seq(['+', '-', '*'])
 
-    question = f'{a}{operator}{b} = ?'
+    question = f'{a} {operator} {b} = ?'
 
     answer = str(eval(f'{a}{operator}{b}'))
 
