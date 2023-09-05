@@ -23,7 +23,7 @@ def play(
     for _ in range(3):
         question, answer = question_generator()
 
-        result = prompt.string(f'Question: {question} ').lower()
+        result = prompt.string(f'Question: {question}\nYour answer: ').lower()
 
         if result != answer:
             print(f'This answer was incorrect! \nLet\'s try again, {name}!')

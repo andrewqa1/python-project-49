@@ -11,4 +11,4 @@ GCD_GAME_START_TEXT = 'Find the greatest common divisor of ' \
 PRIME_GAME_START_TEXT = 'Answer "yes" if given number is prime. ' \
                         'Otherwise answer "no".'
 
-PROGRESSION_GAME_START_TEXT = 'What number is missing in progression?'
+PROGRESSION_GAME_START_TEXT = 'What number is missing in the progression?'
