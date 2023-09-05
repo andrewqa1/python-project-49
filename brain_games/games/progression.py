@@ -1,5 +1,7 @@
 from typing import Tuple
 
+from brain_games.base.base import process_game
+from brain_games.base.consts import PROGRESSION_GAME_START_TEXT
 from brain_games.base.randoms import get_rand_number_from_range
 
 
@@ -21,3 +23,13 @@ def generate_progression_question() -> Tuple[str, str]:
     question = ' '.join(progression)
 
     return question, answer
+
+
+def play():
+    """
+    Function to play the progression game
+    """
+    process_game(
+        question_generator=generate_progression_question,
+        start_game_text=PROGRESSION_GAME_START_TEXT
+    )

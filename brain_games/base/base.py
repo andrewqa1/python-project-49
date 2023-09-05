@@ -5,7 +5,7 @@ import prompt
 from brain_games.base import consts
 
 
-def play(
+def process_game(
         question_generator: Callable[[], Tuple[str, str]],
         start_game_text: str,
 ):

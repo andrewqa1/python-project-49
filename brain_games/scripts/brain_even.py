@@ -1,13 +1,8 @@
-from brain_games.base.consts import EVEN_GAME_START_TEXT
-from brain_games.base.base import play
-from brain_games.games.even import generate_even_question
+from brain_games.games.even import play
 
 
 def main():
-    play(
-        question_generator=generate_even_question,
-        start_game_text=EVEN_GAME_START_TEXT
-    )
+    play()
 
 
 if __name__ == '__main__':
