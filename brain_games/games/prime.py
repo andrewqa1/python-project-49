@@ -1,45 +1,15 @@
-import prompt
+from typing import Tuple
 
-from brain_games.cli import welcome_user, failure, congratulations
-from brain_games.utils.checker import is_prime
-from brain_games.utils.randoms import get_rand_number_from_range
+from brain_games.base.checker import is_prime
+from brain_games.base.randoms import get_rand_number_from_range
 
 
-def play():
+def generate_prime_question() -> Tuple[str, str]:
     """
-    Function to play prime game
+    Function to generate prime question with correct answer
     """
-    name = welcome_user(
-        additional_text='Answer "yes" if given number is prime. '
-                        'Otherwise answer "no".'
-    )
 
-    answer_map = {
-        'yes': True,
-        'no': False
-    }
-    for _ in range(3):
+    question = get_rand_number_from_range(x=0, y=1000)
+    answer = 'yes' if is_prime(question) else 'no'
 
-        number = get_rand_number_from_range(x=-1000, y=1000)
-
-        answer = prompt.regex(
-            pattern='^(?i:yes)|^(?i:no)$',
-            prompt=f'Question: {number}\nYour answer: '
-        )
-
-        answers = list(answer_map.keys())
-
-        if answer_map[answer.string.lower()] != is_prime(number):
-            answers.remove(answer.string.lower())
-            failure(
-                name=name,
-                additional_text=f'"{answer.string.lower()}" is wrong answer ;(.'
-                                f'Correct answer was "{answers[0]}".'
-            )
-            return
-
-        print('Correct!')
-
-    congratulations(
-        name=name
-    )
+    return str(question), answer

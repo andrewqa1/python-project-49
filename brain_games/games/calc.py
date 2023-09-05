@@ -1,37 +1,18 @@
-import prompt
+from typing import Tuple
 
-from brain_games.cli import welcome_user, failure, congratulations
-from brain_games.utils.randoms import (get_rand_number_from_range,
-                                       get_rand_elem_from_seq)
+from brain_games.base.randoms import get_rand_number_from_range, get_rand_elem_from_seq
 
 
-def play():
+def generate_calc_question() -> Tuple[str, str]:
     """
-    Function to play calculator game
+    Function to generate calculator question with correct answer
     """
-    name = welcome_user(
-        additional_text='What is the result of the expression?'
-    )
-    for _ in range(3):
+    a = get_rand_number_from_range(x=0, y=100)
+    b = get_rand_number_from_range(x=0, y=100)
+    operator = get_rand_elem_from_seq(['+', '-', '*'])
 
-        a = get_rand_number_from_range(x=0, y=100)
-        b = get_rand_number_from_range(x=0, y=100)
-        operator = get_rand_elem_from_seq(['+', '-', '*'])
+    question = f'{a}{operator}{b} = ?'
 
-        result = prompt.integer(f'Question: {a} {operator} {b} = ?')
+    answer = str(eval(f'{a}{operator}{b}'))
 
-        real_result = eval(f'{a}{operator}{b}')
-
-        if result != real_result:
-            failure(
-                name=name,
-                additional_text=f'"{result}" is wrong answer ;(. '
-                                f'Correct answer was "{real_result}".'
-            )
-            return
-
-        print('Correct!')
-
-    congratulations(
-        name=name
-    )
+    return question, answer
