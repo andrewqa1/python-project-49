@@ -5,15 +5,8 @@ PRIME_GAME_START_TEXT = 'Answer "yes" if given number is prime. ' \
                         'Otherwise answer "no".'
 
 
-def play():
-    """
-    Function to play the prime game
-    """
+if __name__ == '__main__':
     process_game(
         question_generator=generate_prime_question,
         start_game_text=PRIME_GAME_START_TEXT
     )
-
-
-if __name__ == '__main__':
-    play()
