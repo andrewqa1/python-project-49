@@ -28,6 +28,6 @@ def generate_progression_question() -> Tuple[str, str]:
 
 def play():
     process_game(
-            question_generator=generate_progression_question,
-            start_game_text=PROGRESSION_GAME_START_TEXT
-        )
+        question_generator=generate_progression_question,
+        start_game_text=PROGRESSION_GAME_START_TEXT
+    )
