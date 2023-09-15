@@ -2,7 +2,8 @@ from typing import Callable, Tuple
 
 import prompt
 
-from brain_games.base import consts
+
+BASE_FAILURE_TEXT = '"%s" is wrong answer ;(. Correct answer was "%s"'
 
 
 def process_game(
@@ -28,7 +29,7 @@ def process_game(
 
         if result != answer:
             print(f'This answer was incorrect! \nLet\'s try again, {name}!')
-            print(consts.BASE_FAILURE_TEXT % (result, answer))
+            print(BASE_FAILURE_TEXT % (result, answer))
             return
 
         print('Correct!')
