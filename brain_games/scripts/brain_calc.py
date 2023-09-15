@@ -6,7 +6,7 @@ CALC_GAME_START_TEXT = 'What is the result of the expression?'
 
 def play():
     """
-    Function to play the calculation game
+    Function to play calculcation game
     """
     process_game(
         question_generator=generate_calc_question,
@@ -14,9 +14,5 @@ def play():
     )
 
 
-def main():
-    play()
-
-
 if __name__ == '__main__':
-    main()
+    play()
