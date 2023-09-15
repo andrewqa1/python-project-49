@@ -1,7 +1,10 @@
 from typing import Tuple
 
+from brain_games.base.base import process_game
 from brain_games.base.randoms import (get_rand_number_from_range,
                                       get_rand_elem_from_seq)
+
+CALC_GAME_START_TEXT = 'What is the result of the expression?'
 
 
 def generate_calc_question() -> Tuple[str, str]:
@@ -23,3 +26,10 @@ def generate_calc_question() -> Tuple[str, str]:
     answer = str(calculation_map[operator](a, b))
 
     return question, answer
+
+
+def play():
+    process_game(
+        question_generator=generate_calc_question,
+        start_game_text=CALC_GAME_START_TEXT,
+    )

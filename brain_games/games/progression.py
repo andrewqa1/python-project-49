@@ -1,6 +1,9 @@
 from typing import Tuple
 
+from brain_games.base.base import process_game
 from brain_games.base.randoms import get_rand_number_from_range
+
+PROGRESSION_GAME_START_TEXT = 'What number is missing in the progression?'
 
 
 def generate_progression_question() -> Tuple[str, str]:
@@ -21,3 +24,10 @@ def generate_progression_question() -> Tuple[str, str]:
     question = ' '.join(progression)
 
     return question, answer
+
+
+def play():
+    process_game(
+            question_generator=generate_progression_question,
+            start_game_text=PROGRESSION_GAME_START_TEXT
+        )

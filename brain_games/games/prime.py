@@ -1,6 +1,10 @@
 from typing import Tuple
 
+from brain_games.base.base import process_game
 from brain_games.base.randoms import get_rand_number_from_range
+
+PRIME_GAME_START_TEXT = 'Answer "yes" if given number is prime. ' \
+                        'Otherwise answer "no".'
 
 
 def is_prime(number: int) -> bool:
@@ -28,3 +32,10 @@ def generate_prime_question() -> Tuple[str, str]:
     answer = 'yes' if is_prime(question) else 'no'
 
     return str(question), answer
+
+
+def play():
+    process_game(
+        question_generator=generate_prime_question,
+        start_game_text=PRIME_GAME_START_TEXT
+    )
