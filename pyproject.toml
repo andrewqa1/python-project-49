@@ -9,8 +9,8 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-prompt = "^0.4.1"
+python = "^3.12"
+prompt = "^0.4"
 colorama = "^0.4"
 
 
