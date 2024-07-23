@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 
 install:
-	poetry install
+		poetry install
 
 brain-games:
-	poetry run brain-games
+		poetry run brain-games
 
 build:
-	poetry build
+		poetry build
 
 publish:
-	poetry publish --dry-run
+		poetry publish --dry-run
 
 package-install:
-	python3 -m pip install dist/*.whl --force-reinstall
+		python3 -m pip install dist/*.whl --force-reinstall
 
 lint:
-	poetry run flake8 brain_games
+		poetry run flake8 brain_games
