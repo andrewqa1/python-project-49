@@ -1,8 +1,10 @@
-from brain_games.utils.utils import find_out_name
+import prompt
 
 
 def main():
-    find_out_name()
+    print('Welcome to the Brain Games!')
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
 
 
 if __name__ == '__main__':
