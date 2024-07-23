@@ -1,4 +1,5 @@
 import prompt
+from colorama import Fore
 
 
 def main():
