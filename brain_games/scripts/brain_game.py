@@ -1,4 +1,4 @@
-from brain_games.base.base import find_out_name
+from brain_games.utils.utils import find_out_name
 
 
 def main():

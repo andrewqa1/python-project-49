@@ -6,13 +6,6 @@ from colorama import Fore
 BASE_FAILURE_TEXT = '"%s" is wrong answer ;(. Correct answer was "%s"'
 
 
-def find_out_name():
-    print(Fore.GREEN + 'Welcome to the Brain Games!' + Fore.RESET)
-    name = prompt.string(Fore.YELLOW + 'May I have your name? ' + Fore.RESET)
-    print(Fore.GREEN + f'Hello, {name}!' + Fore.RESET)
-    return name
-
-
 def process_game(
         question_generator: Callable[[], Tuple[str, str]],
         start_game_text: str,
