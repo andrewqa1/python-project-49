@@ -1,7 +1,6 @@
 from typing import Callable, Tuple
 
 import prompt
-from colorama import Fore
 
 BASE_FAILURE_TEXT = '"%s" is wrong answer ;(. Correct answer was "%s"'
 
